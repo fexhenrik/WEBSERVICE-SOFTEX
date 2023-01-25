@@ -1,0 +1,55 @@
+const library = {
+    posts: [
+        {
+            id: 1,
+            name: 'Twilight',
+            author: 'Stephanie Meyer',
+            ISNB: 123456789
+        }
+    ],
+};
+
+
+//CREATE
+function createPost(data) {
+    library.posts.push({
+        id: library.posts.length + 1,
+        name: data.name,
+        author: data.author,
+        ISNB: data.ISNB
+    });
+}
+createPost({name: 'Daisy Jones & The Six', author: 'Taylor Jenkins Reid.', ISNB: 987654321});
+//console.log(library.posts)
+
+
+//READ
+function getPosts() {
+    return library.posts;
+}
+console.log(getPosts())
+
+
+//UPDATE
+function updatecontentPost(id, newContent) {
+    const postUpdate = getPosts().find((post) => {
+        return post.id === id;
+    });
+    console.log(postUpdate)
+    postUpdate.comment = newComment
+}
+updatecontentPost(2, 'Great reading!')
+console.log(getPosts())
+
+
+//DELETE
+function deletePost(id) {
+    const updateListPosts = getPosts().filter((actualPost) => {
+        return actualPost.id !== id;
+    })
+    library.posts = updateListPosts;
+}
+deletePost(1);
+deletePost(2);
+deletePost(3);
+console.log(getPosts());
