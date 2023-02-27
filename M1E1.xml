@@ -1,0 +1,54 @@
+<!--REQUEST-->
+POST /InStock HTTP/1.1
+Host: https://www.consultacliente.com/
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: nnn
+
+<?xml version="1.0"?>
+
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2003/05/soap-envelope/"
+soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
+
+<soap:Header>
+    <a:authentication xmlns:a=”https://www.empresaexemplo.com/soap/authentication/”
+SOAP-ENV:mustUndestrand=”1”>
+    <a:userpermission>admin</a:userpermission>
+    </a:authentication>
+</soap:Header>
+
+<soap:Body xmlns:m="http://www.consultacliente.com/clientaut">
+  <m:GetClientData>
+    <m:ClientId>26</m:ClientId>
+  </m:GetClientData>
+</soap:Body>
+
+</soap:Envelope>
+
+<!--RESPONSE-->
+HTTP/1.1 200 OK
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: nnn
+
+<?xml version="1.0"?>
+
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2003/05/soap-envelope/"
+soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
+
+<soap:Header>
+    <a:authentication xmlns:a=”https://www.consultacliente.com/soap/authentication/”
+SOAP-ENV:mustUndestrand=”1”>
+    <a:userpermission>admin</a:userpermission>
+    </a:authentication>
+</soap:Header>
+
+<soap:Body xmlns:m="http://www.consultacliente.com/clients/">
+  <m:GetClientResponse>
+    <m:ClientName>Felipe Bezerra</m:ClientName>
+    <m:ClientPhone>81992260597</m:ClientPhone>
+    <m:ClientAddress>Rua Padre Diogo Rodrigues, N. 531, Barro, Recife, Pernambuco</m:ClientAddress>
+  </m:GetClientResponse>
+</soap:Body>
+
+</soap:Envelope>
