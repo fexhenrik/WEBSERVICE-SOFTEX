@@ -1,0 +1,29 @@
+{  
+    
+    "alunos":[
+        {
+            "id":1,
+            "nome":"Rodrigo Carvalho",
+            "graduacao": "Música",
+            "materia": "Composição",
+            "nota": 8,
+            "aprovado": true
+        },
+        {
+            "id":2,
+            "nome":"Miguel Santi",
+            "graduacao": "Arquitetura e Urbanismo",
+            "materia": "Desenho Arquitetônico",
+            "nota": 4,
+            "aprovado": false
+        },
+        {
+            "id":3,
+            "nome":"Alberto Barbosa",
+            "graduacao": "Música",
+            "materia": "Comunicação e Expressão",
+            "nota": 9,
+            "aprovado": true
+        }
+    ]
+}
